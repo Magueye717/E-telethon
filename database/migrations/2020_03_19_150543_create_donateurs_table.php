@@ -16,7 +16,7 @@ class CreateDonateursTable extends Migration {
 			$table->string('cni', 18)->nullable();
 			$table->timestamps();
 			$table->integer('contact_id')->unsigned()->nullable();
-			$table->integer('besoin_id')->unsigned();
+			$table->integer('besoin_id')->unsigned()->nullable();
 			$table->integer('user_id')->unsigned();
 		});
 	}

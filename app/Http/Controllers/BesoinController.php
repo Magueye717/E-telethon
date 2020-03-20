@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Besoin;
 use Illuminate\Http\Request;
 
 class BesoinController extends Controller 
@@ -14,7 +15,8 @@ class BesoinController extends Controller
    */
   public function index()
   {
-    
+    $besoins= Besoin:: all();
+    return view('besoins.index'); //,compact("besoins"));
   }
 
   /**
@@ -24,7 +26,7 @@ class BesoinController extends Controller
    */
   public function create()
   {
-    
+    return view('besoins.create'); //,compact("besoins"));
   }
 
   /**
