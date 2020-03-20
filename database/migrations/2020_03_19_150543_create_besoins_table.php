@@ -13,7 +13,7 @@ class CreateBesoinsTable extends Migration {
 			$table->string('type', 255);
 			$table->string('region', 255)->nullable();
 			$table->string('quantite')->nullable();
-			$table->string('cout', 255);
+			$table->integer('cout');
 			$table->boolean('etat');
 			$table->timestamps();
 			$table->integer('user_id')->unsigned();
