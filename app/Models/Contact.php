@@ -11,9 +11,9 @@ class Contact extends Model
     public $timestamps = true;
     protected $fillable = array('prenom', 'nom', 'Tel', 'email', 'poste', 'localite');
 
-    public function donateur()
+    public function Besoin()
     {
-        return $this->belongsTo('App\Models\Donateur');
+        return $this->belongsTo('App\Donateur');
     }
 
 }
