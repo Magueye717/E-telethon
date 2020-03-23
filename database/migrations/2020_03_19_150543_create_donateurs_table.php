@@ -12,8 +12,8 @@ class CreateDonateursTable extends Migration {
 			$table->string('libelle')->nullable();
 			$table->string('rc', 255)->nullable();
 			$table->string('ninea', 255)->nullable();
-			$table->string('type_identification')->nullable();
-			$table->string('numero_piece', 18)->nullable();
+			$table->string('identification')->nullable();
+			$table->string('cni', 18)->nullable();
 			$table->timestamps();
 			$table->integer('contact_id')->unsigned()->nullable();
 			$table->integer('besoin_id')->unsigned()->nullable();

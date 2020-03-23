@@ -9,26 +9,21 @@ class Donateur extends Model
 
     protected $table = 'donateurs';
     public $timestamps = true;
-    protected $fillable = array('libelle', 'rc', 'ninea', 'type_identification', 'numero_piece', 'contact_id', 'user_id', 'besoin_id');
+    protected $fillable = array('libelle', 'rc', 'ninea', 'identification', 'cni', 'contact_id', 'user_id');
 
     public function Contact()
     {
-        return $this->hasOne('App\Models\Contact');
+        return $this->hasOne('App\Contact');
     }
 
     public function Dons()
     {
-        return $this->hasMany('App\Models\Don');
+        return $this->hasMany('App\Don');
     }
-
-   /*  public function Besoin()
-    {
-        return $this->belongsTo('App\Models\Besoin');
-    } */
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('User');
     }
 
 }
